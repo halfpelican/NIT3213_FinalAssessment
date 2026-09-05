@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">NIT3213_FinalAssessment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="login_title">Please Login</string>
+    <string name="login_button">Login</string>
+    <string name="hint_student_id">Student ID</string>
+    <string name="hint_student_password">Student Password</string>
+    <string name="error_login_failed">Login failed. Check your details.</string>
+
+
 </resources>

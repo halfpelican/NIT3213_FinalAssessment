@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="brand_lime">#5F6B00</color>
+    <color name="brand_lime_on">#FFFFFF</color>
+
 </resources>
