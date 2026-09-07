@@ -1,12 +1,14 @@
-package com.vu.nit3213_finalassessment
+package com.vu.nit3213_finalassessment.ui
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.vu.nit3213_finalassessment.R
 
 class FragmentHostActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

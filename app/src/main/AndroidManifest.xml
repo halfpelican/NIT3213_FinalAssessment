@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NIT3213_FinalAssessment">
         <activity
-            android:name=".FragmentHostActivity"
+            android:name=".ui.FragmentHostActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
