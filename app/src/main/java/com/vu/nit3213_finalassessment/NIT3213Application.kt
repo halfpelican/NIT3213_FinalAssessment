@@ -3,7 +3,7 @@ package com.vu.nit3213_finalassessment
 import android.app.Application
 import android.util.Log
 
-class MyBaseApplication: Application() {
+class NIT3213Application: Application() {
 
     override fun onCreate() {
         super.onCreate()

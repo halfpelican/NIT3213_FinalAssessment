@@ -1,4 +1,4 @@
-package com.vu.nit3213_finalassessment.ui.dashboard
+package com.vu.nit3213_finalassessment.ui.details
 
 import android.os.Bundle
 import android.view.LayoutInflater
