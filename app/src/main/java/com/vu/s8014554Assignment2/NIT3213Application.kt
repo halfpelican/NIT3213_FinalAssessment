@@ -1,4 +1,4 @@
-package com.vu.nit3213_finalassessment
+package com.vu.s8014554Assignment2
 
 import android.app.Application
 import android.util.Log

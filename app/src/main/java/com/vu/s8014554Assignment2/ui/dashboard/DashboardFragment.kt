@@ -1,11 +1,11 @@
-package com.vu.nit3213_finalassessment.ui.dashboard
+package com.vu.s8014554Assignment2.ui.dashboard
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.vu.nit3213_finalassessment.R
+import com.vu.s8014554Assignment2.R
 
 /**
  * Displays the list of entities retrieved from the dashboard endpoint.

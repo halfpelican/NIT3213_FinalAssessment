@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.vu.nit3213_finalassessment"
+    namespace = "com.vu.s8014554Assignment2"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.vu.nit3213_finalassessment"
+        applicationId = "com.vu.s8014554Assignment2"
         minSdk = 27
         targetSdk = 37
         versionCode = 1

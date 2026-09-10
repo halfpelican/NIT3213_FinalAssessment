@@ -1,11 +1,11 @@
-package com.vu.nit3213_finalassessment.ui
+package com.vu.s8014554Assignment2.ui
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.vu.nit3213_finalassessment.R
+import com.vu.s8014554Assignment2.R
 
 class FragmentHostActivity : AppCompatActivity() {
 

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.vu.nit3213_finalassessment.ui.login.LoginFragment"
+        android:name="com.vu.s8014554Assignment2.ui.login.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/dashboardFragment"
-        android:name="com.vu.nit3213_finalassessment.ui.dashboard.DashboardFragment"
+        android:name="com.vu.s8014554Assignment2.ui.dashboard.DashboardFragment"
         android:label="DashboardFragment" >
         <action
             android:id="@+id/action_dashboardFragment_to_detailsFragment"
@@ -24,6 +24,6 @@
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.vu.nit3213_finalassessment.ui.details.DetailsFragment"
+        android:name="com.vu.s8014554Assignment2.ui.details.DetailsFragment"
         android:label="DetailsFragment" />
 </navigation>

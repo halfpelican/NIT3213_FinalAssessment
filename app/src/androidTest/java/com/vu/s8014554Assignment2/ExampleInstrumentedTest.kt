@@ -1,4 +1,4 @@
-package com.vu.nit3213_finalassessment
+package com.vu.s8014554Assignment2
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
