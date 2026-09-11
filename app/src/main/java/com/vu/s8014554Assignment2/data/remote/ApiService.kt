@@ -7,8 +7,8 @@ import retrofit2.http.POST
 
 /** Retrofit definition of the nit3213api endpoints. */
 interface ApiService {
-    @POST("footscray/auth")
     /** Authenticates the student. Returns the keypass on 200;
      * throws HttpException on 400 (wrong ID or first name). */
+    @POST("footscray/auth")
     suspend fun login(@Body request: LoginRequest): LoginResponse
 }
