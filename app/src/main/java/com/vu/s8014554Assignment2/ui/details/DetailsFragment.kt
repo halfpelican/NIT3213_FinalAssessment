@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import com.vu.s8014554Assignment2.R
 
 /**
- * Displays the list of entities retrieved from the dashboard endpoint.
- * Tapping an entity navigates to the details screen.
+ * Displays the details of the entity retrieved from the dashboard endpoint.
+ *
  */
 class DetailsFragment : Fragment() {
 
@@ -17,7 +17,7 @@ class DetailsFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? = inflater.inflate(R.layout.fragment_dashboard, container, false)
+    ): View? = inflater.inflate(R.layout.fragment_details, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

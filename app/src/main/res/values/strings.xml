@@ -6,7 +6,7 @@
     <string name="hint_student_id">Student ID</string>
     <string name="hint_student_password">Student Password</string>
     <string name="error_login_failed">Login failed. Check your details.</string>
-    <string name="temp_details">Details (temp)</string>
+    <string name="details_button">Details</string>
 
 
 </resources>
