@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -37,9 +38,19 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
     implementation(libs.material)
-    implementation("androidx.navigation:navigation-fragment-ktx:2.10.0")
-    implementation("androidx.navigation:navigation-ui-ktx:2.10.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.10.1")
+    implementation("androidx.navigation:navigation-ui-ktx:2.10.1")
     testImplementation(libs.junit)
+
+    // Retrofit dependencies
+    implementation("com.squareup.retrofit2:retrofit:3.0.0")
+    implementation("com.squareup.retrofit2:converter-moshi:3.0.0")
+    implementation("com.squareup.moshi:moshi-kotlin:1.15.2")
+    implementation("com.squareup.okhttp3:logging-interceptor:5.5.0")
+
+    // ViewModel + lifecycle coroutine scopes
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.11.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.11.0")
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
 }
