@@ -16,6 +16,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.vu.s8014554Assignment2.R
+import com.vu.s8014554Assignment2.ui.dashboard.DashboardFragment
 import kotlinx.coroutines.launch
 
 /**
@@ -128,7 +129,7 @@ class LoginFragment : Fragment() {
 
                 // The Dashboard needs the keypass for its GET /dashboard/{keypass} call.
                 val args = Bundle().apply {
-                    putString("keypass", state.keypass)
+                    putString(DashboardFragment.ARG_KEYPASS, state.keypass)
                 }
                 findNavController().navigate(R.id.action_loginFragment_to_dashboardFragment, args)
 

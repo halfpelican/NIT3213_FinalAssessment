@@ -19,7 +19,13 @@
     <fragment
         android:id="@+id/dashboardFragment"
         android:name="com.vu.s8014554Assignment2.ui.dashboard.DashboardFragment"
-        android:label="DashboardFragment" >
+        android:label="DashboardFragment"
+        tools:layout="@layout/fragment_dashboard">
+
+        <argument
+            android:name="keypass"
+            app:argType="string"/>
+
         <action
             android:id="@+id/action_dashboardFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
