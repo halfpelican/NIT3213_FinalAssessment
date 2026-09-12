@@ -18,8 +18,8 @@
         />
 
     <EditText
-        android:id="@+id/studentIDField"
-        android:inputType="text"
+        android:id="@+id/studentIdField"
+        android:inputType="number"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="@string/hint_student_id"
@@ -33,7 +33,7 @@
         />
 
     <EditText
-        android:id="@+id/studentPasswordField"
+        android:id="@+id/passwordField"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="@string/hint_student_password"
@@ -44,7 +44,7 @@
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentIDField"
+        app:layout_constraintTop_toBottomOf="@+id/studentIdField"
         />
 
     <Button
@@ -71,7 +71,7 @@
         tools:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentPasswordField" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordField" />
 
     <ProgressBar
         android:id="@+id/progressBar"
