@@ -4,5 +4,5 @@ import com.squareup.moshi.Json
 
 /** 200 response received from server */
 data class LoginResponse(
-    @Json(name = "keypass") val keypass: String
+    @param:Json(name = "keypass") val keypass: String
 )
