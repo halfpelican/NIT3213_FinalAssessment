@@ -23,4 +23,13 @@ class DetailsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         // RecyclerView and navigation wiring goes here
     }
+
+    companion object {
+        /** Key for the keypass passed in from the login screen. */
+        const val ARG_TITLE = "artworkTitle"
+        const val ARG_ARTIST = "artist"
+        const val ARG_MEDIUM = "medium"
+        const val ARG_YEAR = "year"
+        const val ARG_DESCRIPTION = "description"
+    }
 }
