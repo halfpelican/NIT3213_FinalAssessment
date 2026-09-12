@@ -1,5 +1,6 @@
 package com.vu.s8014554Assignment2.ui.login
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.vu.s8014554Assignment2.data.remote.Nit3213RetrofitClient
@@ -54,15 +55,21 @@ class LoginViewModel : ViewModel() {
             } catch (e: HttpException) {
                 // Server replied, but not with 2xx. 400 = wrong credentials (verified in Postman).
                 _uiState.value = LoginUiState.Error(
-                    if (e.code() == 400) "Incorrect student ID or first name (first name is case-sensitive)."
-                    else "Server error (${e.code()}). Please try again."
+                    when (e.code()) {
+                        400, 401, 404 ->
+                            "Incorrect student ID or first name (first name is case-sensitive)."
+
+                        else -> "Server error (${e.code()}). Please try again."
+                    }
                 )
             } catch (e: SocketTimeoutException) {
                 // Must come before IOException, which it extends.
+                Log.w("LoginViewModel", "Login Timed out", e)
                 _uiState.value =
                     LoginUiState.Error("The server is waking up. Please try again in a moment.")
             } catch (e: IOException) {
                 // Request never reached the server (offline, DNS failure, etc.).
+                Log.w("LoginViewModel", "Device is offline", e)
                 _uiState.value =
                     LoginUiState.Error("No internet connection. Check your network and try again.")
             } catch (e: Exception) {
