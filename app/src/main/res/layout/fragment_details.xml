@@ -27,12 +27,22 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
+        android:id="@+id/mediumYearText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        tools:text="Oil paint · 1503"
+        app:layout_constraintTop_toBottomOf="@+id/subtitleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
         android:id="@+id/descriptionText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         tools:text="A longer description that wraps across several lines."
-        app:layout_constraintTop_toBottomOf="@+id/subtitleText"
+        app:layout_constraintTop_toBottomOf="@+id/mediumYearText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
