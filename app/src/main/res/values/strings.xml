@@ -1,12 +1,11 @@
 <resources>
     <string name="app_name">s8014554Assignment2</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="login_title">Please Login</string>
     <string name="login_button">Login</string>
     <string name="hint_student_id">Student ID</string>
     <string name="hint_student_password">Student Password</string>
     <string name="error_login_failed">Login failed. Check your details.</string>
+    <string name="keypass_error">Entities failed to load</string>
     <string name="details_button">Details</string>
-
-
+    <string name="entity_medium_year">%1$s · %2$d</string>
 </resources>
