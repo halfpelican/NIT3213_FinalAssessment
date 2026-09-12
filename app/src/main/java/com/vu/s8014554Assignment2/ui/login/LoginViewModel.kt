@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 import java.io.IOException
 import java.net.SocketTimeoutException
 import retrofit2.HttpException
-import jakarta.inject.Inject
+import javax.inject.Inject
 
 /**
  * Holds the login screen's state and performs the login request.
