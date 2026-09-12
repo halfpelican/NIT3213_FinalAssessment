@@ -3,14 +3,15 @@ package com.vu.s8014554Assignment2.ui.login
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vu.s8014554Assignment2.data.remote.Nit3213RetrofitClient
 import com.vu.s8014554Assignment2.data.repository.AuthRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import java.io.IOException
 import java.net.SocketTimeoutException
 import retrofit2.HttpException
+import jakarta.inject.Inject
 
 /**
  * Holds the login screen's state and performs the login request.
@@ -19,10 +20,10 @@ import retrofit2.HttpException
  * All network work runs in [viewModelScope], so it survives configuration
  * changes (e.g. rotation) and is cancelled when the ViewModel is cleared.
  */
-class LoginViewModel : ViewModel() {
-    // Created manually for now; will be injected by Hilt in the DI stage.
-    private val repository = AuthRepository(Nit3213RetrofitClient().apiService)
-
+@HiltViewModel
+class LoginViewModel @Inject constructor(
+    private val repository: AuthRepository
+) : ViewModel() {
     /** Backing state — only this ViewModel can change it. */
     private val _uiState = MutableStateFlow<LoginUiState>(LoginUiState.Idle)
 

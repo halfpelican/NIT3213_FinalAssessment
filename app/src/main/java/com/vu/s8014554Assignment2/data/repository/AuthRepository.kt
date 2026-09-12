@@ -3,6 +3,7 @@ package com.vu.s8014554Assignment2.data.repository
 import com.vu.s8014554Assignment2.data.model.LoginRequest
 import com.vu.s8014554Assignment2.data.model.LoginResponse
 import com.vu.s8014554Assignment2.data.remote.ApiService
+import javax.inject.Inject
 
 /**
  * Single source of authentication data for the app.
@@ -12,7 +13,7 @@ import com.vu.s8014554Assignment2.data.remote.ApiService
  * constructor so a fake can be supplied in unit tests (and Hilt can inject
  * the real one later).
  */
-class AuthRepository(private val apiService: ApiService) {
+class AuthRepository @Inject constructor(private val apiService: ApiService) {
     /**
      * Sends the student's credentials to the Footscray auth endpoint.
      *
