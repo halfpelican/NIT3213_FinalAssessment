@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.vu.s8014554Assignment2.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class FragmentHostActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

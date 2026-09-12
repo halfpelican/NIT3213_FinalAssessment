@@ -9,6 +9,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.vu.s8014554Assignment2.R
+import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * Dashboard screen: lists the entities returned by the nit3213api.
@@ -17,6 +18,7 @@ import com.vu.s8014554Assignment2.R
  * and uses it for the GET /dashboard/{keypass} call. Entities will be shown in
  * a RecyclerView, and tapping one opens the details screen.
  */
+@AndroidEntryPoint
 class DashboardFragment : Fragment() {
 
     private lateinit var detailsButton: Button

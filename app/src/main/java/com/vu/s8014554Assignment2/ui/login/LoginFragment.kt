@@ -17,6 +17,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.vu.s8014554Assignment2.R
 import com.vu.s8014554Assignment2.ui.dashboard.DashboardFragment
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 /**
@@ -27,6 +28,7 @@ import kotlinx.coroutines.launch
  * [LoginViewModel] and renders whatever [LoginUiState] comes back. On 'success'
  * it passes the returned keypass to the Dashboard as a navigation argument.
  */
+@AndroidEntryPoint
 class LoginFragment : Fragment() {
 
     private lateinit var loginButton: Button
