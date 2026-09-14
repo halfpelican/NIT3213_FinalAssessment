@@ -40,7 +40,11 @@ di/               Hilt module providing the networking stack
 
 ## Build and run
 
-1. Clone the repository: git clone https://github.com/halfpelican/NIT3213_FinalAssessment.git
+1. Clone the repository:
+
+```
+   git clone https://github.com/halfpelican/NIT3213_FinalAssessment.git
+```
 2. Open the project in Android Studio and let Gradle sync.
 3. Run the `app` configuration on an emulator or device (API 27 or higher).
 4. Log in with your student ID as the username and your first name as the
@@ -52,7 +56,11 @@ set to 60 seconds for this reason.
 
 ## Tests
 
-Run the unit tests from Android Studio, or: ./gradlew test
+Run the unit tests from Android Studio, or:
+
+```
+./gradlew test
+```
 
 `LoginViewModelTest` covers input validation, a successful login and the 400
 credentials failure. `DashboardViewModelTest` covers the success path, the 404
