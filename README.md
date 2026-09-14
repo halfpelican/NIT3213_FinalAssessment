@@ -14,12 +14,14 @@ list of artworks, with a details screen for each one.
 ## Architecture
 
 The app follows an MVVM structure with a repository layer:
-  ui/ Fragments, ViewModels and UI state (one ViewModel per screen)
-  data/model Moshi data classes matching the API's JSON
-  data/remote Retrofit ApiService interface
-  data/repository Repositories that the ViewModels depend on
-  di/ Hilt module providing the networking stack.
 
+```
+ui/               Fragments, ViewModels and UI state (one ViewModel per screen)
+data/model        Moshi data classes matching the API's JSON
+data/remote       Retrofit ApiService interface
+data/repository   Repositories that the ViewModels depend on
+di/               Hilt module providing the networking stack
+```
 
 - **Dependency injection:** Hilt. `NetworkModule` provides the OkHttp client,
   Moshi, Retrofit and `ApiService` as singletons; repositories and ViewModels
