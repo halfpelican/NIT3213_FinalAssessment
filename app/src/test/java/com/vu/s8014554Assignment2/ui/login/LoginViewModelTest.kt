@@ -65,8 +65,6 @@ class LoginViewModelTest {
     }
 
     @Test fun`Blank fields produce Error without calling the repository`() = runTest(testDispatcher) {
-        // Given
-
         // When
         viewModel.login("", "")
 
