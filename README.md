@@ -43,7 +43,7 @@ di/               Hilt module providing the networking stack
 1. Clone the repository:
 
 ```
-   git clone https://github.com/halfpelican/NIT3213_FinalAssessment.git
+   git clone https://github.com/halfpelican/s8014554Assignment2.git
 ```
 2. Open the project in Android Studio and let Gradle sync.
 3. Run the `app` configuration on an emulator or device (API 27 or higher).
