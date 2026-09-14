@@ -27,6 +27,8 @@ import retrofit2.Response
  * The repository is mocked with MockK so no network call is made, and the Main
  * dispatcher is replaced with a test dispatcher so viewModelScope coroutines
  * run under the test's control.
+ *
+ * Covers input validation, a successful login, and the 400 credentials failure.
  */
 @OptIn(ExperimentalCoroutinesApi::class)
 class LoginViewModelTest {
