@@ -7,7 +7,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.vu.s8014554Assignment2.R
 import dagger.hilt.android.AndroidEntryPoint
-/** Application class annotated for Hilt; the root of the dependency graph. */
+/** Single activity hosting the navigation graph for all three screens. */
 @AndroidEntryPoint
 class FragmentHostActivity : AppCompatActivity() {
 

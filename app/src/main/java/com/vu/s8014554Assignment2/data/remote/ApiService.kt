@@ -11,9 +11,10 @@ import retrofit2.http.Path
 /** Retrofit definition of the nit3213api endpoints. */
 interface ApiService {
     /**
-     * Authenticates the student. Returns the keypass on 200;
+     * Authenticates the student. Returns the keypass on 200.
      *
-     * @throws retrofit2.HttpException on a non-2xx response (400 = wrong first name, 404 = unknown student ID).
+     * @throws retrofit2.HttpException on a non-2xx response
+     * (400 = wrong first name, 404 = unknown student ID).
      */
     @POST("footscray/auth")
     suspend fun login(@Body request: LoginRequest): LoginResponse
