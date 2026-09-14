@@ -1,7 +1,6 @@
 package com.vu.s8014554Assignment2.ui.dashboard
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -56,7 +55,6 @@ class DashboardFragment : Fragment() {
         keypass = requireNotNull(requireArguments().getString(ARG_KEYPASS)) {
             "DashboardFragment requires a keypass argument"
         }
-        Log.d("Dashboard", "Received keypass: $keypass")
 
         setupRecyclerView()
         observeUiState()
