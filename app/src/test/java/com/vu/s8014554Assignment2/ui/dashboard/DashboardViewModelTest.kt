@@ -4,7 +4,6 @@ package com.vu.s8014554Assignment2.ui.dashboard
 import com.vu.s8014554Assignment2.data.model.DashboardResponse
 import com.vu.s8014554Assignment2.data.model.Entity
 import com.vu.s8014554Assignment2.data.repository.DashboardRepository
-import com.vu.s8014554Assignment2.ui.login.LoginUiState
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk
@@ -19,7 +18,6 @@ import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
 import okhttp3.ResponseBody.Companion.toResponseBody
 import org.junit.After
-import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 import retrofit2.HttpException
@@ -92,7 +90,8 @@ class DashboardViewModelTest {
     fun `loadEntities does not refetch once loaded`() = runTest(testDispatcher) {
         // Given a successful first load
         coEvery { repository.getEntities("art") } returns DashboardResponse(
-            listOf(monaLisa), 1)
+            listOf(monaLisa), 1
+        )
         viewModel.loadEntities("art")
         advanceUntilIdle()
 
@@ -116,8 +115,9 @@ class DashboardViewModelTest {
 
         // Then
         val state = viewModel.uiState.value
-        Assert.assertTrue(state is DashboardUiState.Error)
-        assertTrue((state as DashboardUiState.Error).message.contains("Could not load artworks"))    }
+        assertTrue(state is DashboardUiState.Error)
+        assertTrue((state as DashboardUiState.Error).message.contains("Could not load artworks"))
+    }
 
 }
 

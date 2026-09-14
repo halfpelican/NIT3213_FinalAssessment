@@ -10,8 +10,7 @@ import javax.inject.Inject
  *
  * Sits between the ViewModel and the network layer so the UI never deals
  * with Retrofit or request models directly. Takes [ApiService] through its
- * constructor so a fake can be supplied in unit tests (and Hilt can inject
- * the real one later).
+ * constructor so a fake can be supplied in unit tests and Hilt can inject the real one.
  */
 class AuthRepository @Inject constructor(private val apiService: ApiService) {
     /**

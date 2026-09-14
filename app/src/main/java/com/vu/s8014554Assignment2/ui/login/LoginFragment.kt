@@ -25,8 +25,8 @@ import kotlinx.coroutines.launch
  * them against the nit3213api.
  *
  * Holds no logic of its own — it forwards the typed credentials to
- * [LoginViewModel] and renders whatever [LoginUiState] comes back. On 'success'
- * it passes the returned keypass to the Dashboard as a navigation argument.
+ * [LoginViewModel] and renders whatever [LoginUiState] comes back.
+ * [LoginUiState.Success] passes the returned keypass to the Dashboard as a navigation argument.
  */
 @AndroidEntryPoint
 class LoginFragment : Fragment() {

@@ -54,7 +54,7 @@ class LoginViewModel @Inject constructor(
                 val response = repository.login(trimmedUsername, password)
                 _uiState.value = LoginUiState.Success(response.keypass)
             } catch (e: HttpException) {
-                // Server replied, but not with 2xx. 400 = wrong credentials (verified in Postman).
+                // Server replied, but not with 2xx. (400 = wrong first name, 404 = unknown ID; both verified in Postman).
                 _uiState.value = LoginUiState.Error(
                     when (e.code()) {
                         400, 401, 404 ->

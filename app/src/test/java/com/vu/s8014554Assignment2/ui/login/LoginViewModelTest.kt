@@ -66,7 +66,14 @@ class LoginViewModelTest {
         assertEquals("art", (state as LoginUiState.Success).keypass)
     }
 
-    @Test fun`Blank fields produce Error without calling the repository`() = runTest(testDispatcher) {
+    /**
+     * Validation happens before any coroutine starts, so blank input must not
+     * reach the network layer at all. The coVerify is the real assertion here:
+     * an Error state alone would also appear if the request had been made and
+     * failed.
+     */
+    @Test
+    fun `Blank fields produce Error without calling the repository`() = runTest(testDispatcher) {
         // When
         viewModel.login("", "")
 
@@ -77,19 +84,20 @@ class LoginViewModelTest {
     }
 
     @Test
-    fun `An HttpException with code 400 produces the credentials Error message`() = runTest(testDispatcher) {
-        // Given
-        val http400 = HttpException(Response.error<Any>(400, "".toResponseBody(null)))
-        coEvery { repository.login(any(), any()) } throws http400
+    fun `An HttpException with code 400 produces the credentials Error message`() =
+        runTest(testDispatcher) {
+            // Given
+            val http400 = HttpException(Response.error<Any>(400, "".toResponseBody(null)))
+            coEvery { repository.login(any(), any()) } throws http400
 
-        // When
-        viewModel.login("8014554", "wrongname")
-        advanceUntilIdle()
+            // When
+            viewModel.login("8014554", "wrongname")
+            advanceUntilIdle()
 
-        // Then
-        val state = viewModel.uiState.value
-        assertTrue(state is LoginUiState.Error)
-        assertTrue((state as LoginUiState.Error).message.contains("Incorrect student ID"))
-    }
+            // Then
+            val state = viewModel.uiState.value
+            assertTrue(state is LoginUiState.Error)
+            assertTrue((state as LoginUiState.Error).message.contains("Incorrect student ID"))
+        }
 }
 
